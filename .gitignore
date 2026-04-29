@@ -17,6 +17,8 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+package-lock.json
+next-env.d.ts
 
 # OS
 .DS_Store
@@ -26,3 +28,9 @@ Thumbs.db
 .vscode/
 .idea/
 *.swp
+
+# Project scripts / temp files
+push_to_github.ps1
+PROJECT_COMPLETE.md
+START.md
+tools/
