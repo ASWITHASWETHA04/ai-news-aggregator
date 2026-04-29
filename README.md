@@ -452,27 +452,6 @@ ai-news-aggregator/
 
 ---
 
-## 📡 API Documentation
-
-Interactive docs available at: **http://localhost:8000/docs**
-
-| Method | Endpoint | Auth | Description |
-|--------|----------|------|-------------|
-| POST | `/auth/signup` | ❌ | Register new user |
-| POST | `/auth/login` | ❌ | Login, get JWT token |
-| GET | `/auth/me` | ✅ | Get current user |
-| GET | `/news/feed` | ✅ | Personalized news feed |
-| GET | `/news/trending` | ❌ | Trending articles |
-| GET | `/news/search?q=` | ✅ | Keyword search |
-| GET | `/news/category/{cat}` | ❌ | Articles by category |
-| GET | `/news/article?url=` | ✅ | Single article detail |
-| POST | `/news/refresh` | ✅ | Refresh news feed |
-| POST | `/chat/` | ✅ | Send message to AI |
-| POST | `/chat/index` | ✅ | Index news into FAISS |
-| DELETE | `/chat/history` | ✅ | Clear chat history |
-| GET | `/preferences/` | ✅ | Get user preferences |
-| PUT | `/preferences/` | ✅ | Update preferences |
-
 ---
 
 ## 🚢 Deployment
