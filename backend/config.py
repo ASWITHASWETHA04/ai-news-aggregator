@@ -24,12 +24,19 @@ class Settings(BaseSettings):
     NEWS_API_KEY: str = ""
     GNEWS_API_KEY: str = ""
 
-    # CORS
+    # CORS — accepts comma-separated string OR list
     CORS_ORIGINS: List[str] = ["http://localhost:3000"]
 
     class Config:
         env_file = ".env"
         env_file_encoding = "utf-8"
+
+    @property
+    def cors_origins_list(self) -> List[str]:
+        """Parse CORS origins whether stored as list or comma-separated string."""
+        if isinstance(self.CORS_ORIGINS, str):
+            return [o.strip() for o in self.CORS_ORIGINS.split(",")]
+        return self.CORS_ORIGINS
 
 
 settings = Settings()
